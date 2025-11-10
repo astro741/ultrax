@@ -90,7 +90,7 @@
     "start-home": "concurrently \"yarn lingui:prepare && PORT=3010 env-cmd -e development-home react-app-rewired start\" \"node auth/server.js\"",
     "start-app": "concurrently \"yarn lingui:prepare && PORT=3011 env-cmd -e development-app react-app-rewired start\" \"node auth/server.js\"",
     "start-win": "node auth/server.js",
-    "build": "INLINE_RUNTIME_CHUNK=false yarn test:ci && react-app-rewired build",
+    "build": "yarn test:ci && react-app-rewired build",
     "build-home": "INLINE_RUNTIME_CHUNK=false env-cmd -e production-home react-app-rewired build",
     "build-app": "INLINE_RUNTIME_CHUNK=false env-cmd -e production-app yarn test:ci && react-app-rewired build",
     "test": "react-app-rewired test",
